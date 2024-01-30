@@ -74,7 +74,7 @@ def format_slot(slot):
 
 def home(request):
 
-    free_slots = get_free_slots()
-    formatted_slots = [format_slot(slot) for slot in free_slots]
-    print('formatted_slots',formatted_slots)
-    return render(request, 'index.html', {'free_slots': formatted_slots})
+    # free_slots = get_free_slots()
+    # formatted_slots = [format_slot(slot) for slot in free_slots]
+    # print('formatted_slots',formatted_slots)
+    return render(request, 'index.html' )
