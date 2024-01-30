@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+
+    <!-- Blog Section Begin -->
+    <section class="blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5">
+                    <div class="blog__sidebar">
+                        <div class="blog__sidebar__search">
+                            <form action="{% url 'blog' %}" method="get">
+                                <input type="text" name="query" placeholder="Buscar...">
+                                <button type="submit"><span class="lni-search"></span></button>
+                            </form>
+
+                        </div>
+                        <div class="blog__sidebar__item">
+    <h4>Categorias</h4>
+    <ul>
+        <li><a href="{% url 'blog' %}?categoria=todas">Todas</a></li>
+        {% for post_category in post_categorys %}
+        <li><a href="{% url 'blog' %}?categoria={{ post_category.id }}">{{ post_category.name }} ({{ post_category.count_posts }})</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="row">
+                        {% for post in posts %}
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item">
+                                <div class="blog__item__pic">
+                                    <img src="{{post.image.url}}" alt="{{post.title}}">
+                                </div>
+                                <div class="blog__item__text">
+                                    <ul>
+                                        <li><i class="fa fa-calendar-o"></i> {{post.pub_date}}</li>
+                                        <li><i class="fa fa-comment-o"></i> {{post.comments_count}}</li>
+                                    </ul>
+                                    <h5><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h5>
+                                    <p>{{post.short_content}}...</p>
+                                    <a href="{{post.get_absolute_url}}" class="blog__btn">LEIA MAIS <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                       {% endfor %}
+                        <div class="col-lg-12">
+                            <div class="product__pagination blog__pagination text-center">
+                        <a href="?page=1">&laquo; </a>
+                        {% if posts.has_previous %}
+                        <a href="?page={{ posts.previous_page_number }}">&lsaquo; </a>
+                        {% endif %}
+
+                        {% for num in posts.paginator.page_range %}
+                        {% if num > posts.number|add:'-3' and num < posts.number|add:'3' %}
+                        {% if posts.number == num %}
+                        <a href="?page={{ num }}" class="active">{{ num }}</a>
+                        {% else %}
+                        <a href="?page={{ num }}">{{ num }}</a>
+                        {% endif %}
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}"> &rsaquo;</a>
+                        {% endif %}
+                        <a href="?page={{ posts.paginator.num_pages }}"> &raquo;</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+{% endblock %}
