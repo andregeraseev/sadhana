@@ -557,7 +557,7 @@ p {
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: #2bdbdc;
+      background-color: #eb87e3;
       margin: 0 auto; }
   .single-pricing .pricing-header .price {
     display: block;
@@ -625,7 +625,7 @@ p {
 .single-pricing.pro .pricing-header .sub-title::before {
   right: 0;
   left: 0;
-  background-color: #2c81f6; }
+  background-color: #aa2bdc8f; }
 
 .single-pricing.pro .pricing-baloon {
   position: absolute;
@@ -636,7 +636,7 @@ p {
 .single-pricing.enterprise .pricing-header .sub-title::before {
   right: 0;
   left: 0;
-  background-color: #6cb448; }
+  background-color: #7336e79c; }
 
 .single-pricing.enterprise .pricing-flower {
   position: absolute;
