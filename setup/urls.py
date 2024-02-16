@@ -20,8 +20,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from blog.views import BlogView, BlogDetailView
 from setup.views import home
+from django.views.generic import TemplateView
 
 urlpatterns = [
+    path('sobre/', TemplateView.as_view(template_name='sobre.html'), name='sobre'),
+    path('terapias/', TemplateView.as_view(template_name='terapias.html'), name='terapias'),
     path('admin/', admin.site.urls),
     path('', home, name='index'),
     path('blog/', BlogView.as_view(), name='blog'),
