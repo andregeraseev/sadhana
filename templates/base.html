@@ -76,12 +76,12 @@
                             </div>
 
                             <div class="navbar-social d-none d-sm-flex align-items-center">
-                                <span>NOS SIGA</span>
+                                <span>SIGA EM</span>
                                 <ul>
-                                    <li><a href="https://www.facebook.com/sadhana.terapias1/"><i class="lni-facebook-filled"></i></a></li>
-                                    <li><a href="#"><i class="lni-twitter-original"></i></a></li>
+<!--                                    <li><a href="https://www.facebook.com/sadhana.terapias1/"><i class="lni-facebook-filled"></i></a></li>-->
+<!--                                    <li><a href="#"><i class="lni-twitter-original"></i></a></li>-->
                                     <li><a href="#"><i class="lni-instagram-original"></i></a></li>
-                                    <li><a href="#"><i class="lni-linkedin-original"></i></a></li>                                  
+<!--                                    <li><a href="#"><i class="lni-linkedin-original"></i></a></li>                                  -->
                                 </ul>
                             </div>
                         </nav> <!-- navbar -->
@@ -90,13 +90,13 @@
             </div> <!-- container -->
         </div> <!-- navgition -->
 
-        <div id="home" class="header-hero bg_cover" style="background-image: url(/static/assets/images/sadhana_fundo.png)">
+        <div id="home" class="header-hero bg_cover" style="background-image: url(/static/assets/images/sadhana_fundo2.png)">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-10">
                         <div class="header-content text-center">
                             <h3 class="header-title">Centro de terapias naturais Sadhana</h3>
-                            <p class="text">Tratamentos naturais com massagens e produtos para sua saude</p>
+<!--                            <p class="text">Tratamentos naturais com massagens e produtos para sua saude</p>-->
 <!--                            <ul class="header-btn">-->
 <!--                                <li><a class="main-btn btn-one" href="#">GET IN TOUCH</a></li>-->
 <!--                                <li><a class="main-btn btn-two video-popup" href="https://www.youtube.com/watch?v=r44RKWyfcFw">WATCH THE VIDEO <i class="lni-play"></i></a></li>-->
@@ -116,7 +116,43 @@
     <!-- Conteúdo principal da página -->
     {% endblock %}
 
+     <!--====== WHATSAPP PART START ======-->
+
+    <style>
+        .whatsapp-button {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 10px;
+  left: 20px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+}
+
+.whatsapp-button img {
+  width: 100%;
+  height: auto;
+}
+</style>
+
+    <a href="https://api.whatsapp.com/send?phone=5512997166681&text=Olá, estou navegando pelo site e gostaria de tirar uma dúvida" class="whatsapp-button" target="_blank">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp"/>
+</a>
+
+
+
+    <!--====== WHATSAPP PART ENDS ======-->
+
+
+
     <!--====== FOOTER PART START ======-->
+
+
+
 
     <footer id="footer" class="footer-area">
         <div class="footer-widget">
