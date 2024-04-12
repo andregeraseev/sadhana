@@ -53,7 +53,11 @@ a:hover {
 i,
 span,
 a {
-  display: inline-block; }
+  display: inline-block;
+  color:#9d73a5;
+}
+a :hover{
+  color: #9e3ea8;
 
 h1,
 h2,
